@@ -1,0 +1,6 @@
+height=int(input("키를 입력하세요"))
+weight=float(input("몸무계를 입력하세요"))
+name=input("이름을 입력 하시오")
+print("키=%d"%height)
+print("몸무게=%.1f"%weight)
+print("이름=%s"%name)
