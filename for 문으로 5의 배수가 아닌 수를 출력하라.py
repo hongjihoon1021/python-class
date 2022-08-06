@@ -1,5 +1,5 @@
 count=0
-for i in range(200,801999909,1):
+for i in range(200,801,1):
     if i%5 != 0:
         print(i,end=' ')
         count+=1
