@@ -1,0 +1,35 @@
+str_='abcdwwesdewdcba'
+def isPalindrome(str_):
+    start=0
+    end=len(str_)-1
+    flag=0
+    # flag = 1 : 회문 아님 flag2 :유사회문 아님
+    while start<=end:
+        if str_[start]!=str_[end]:
+            flag = 1
+            break
+        start+=1
+        end-=1
+    if flag == 1:
+        s2=start+1
+        e2=end
+        while s2<=e2:
+            if str_[s2]!=str_[e2]:
+                flag=2
+                break
+            s2+=1
+            e2-=1
+        if flag==2:
+            s3=start
+            e3=end-1
+            flag=1
+            while s3<=e3:
+                if str_[s3]!=str_[e3]:
+                    flag=2
+                    return 0
+                s3+=1
+                e3-=1
+    if flag==1:
+            return 2
+    return 1
+print(isPalindrome(str_))
